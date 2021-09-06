@@ -31,4 +31,16 @@ public class StackDD {
 		}
 	}
 	
+	// pop method
+	public Integer pop() {
+		if (top < 0) {
+			// stack underflow
+			return 0;
+		} else {
+			// popping number from stack
+			Integer numPopped = stack[top];
+			return numPopped;
+		}
+	}
+	
 }
