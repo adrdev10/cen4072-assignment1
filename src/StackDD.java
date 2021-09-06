@@ -19,6 +19,16 @@ public class StackDD {
 		return (top < 0);
 	}
 	
-	
+	// push method
+	public boolean push(Integer numInt) {
+		if (top >= (MAX_NUMBER_OF_OBJECTS - 1)) {
+			// stack overflow
+			return false;
+		} else {
+			// pushing number to stack
+			stack[++top] = numInt;
+			return true;
+		}
+	}
 	
 }
