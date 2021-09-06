@@ -14,11 +14,6 @@ public class StackDD {
 		top = -1;
 	}
 	
-	// isEmpty method
-	public boolean isEmpty() {
-		return (top < 0);
-	}
-	
 	// push method
 	public boolean push(Integer numInt) {
 		if (top >= (MAX_NUMBER_OF_OBJECTS - 1)) {
@@ -52,6 +47,16 @@ public class StackDD {
 			Integer topNum = stack[top];
 			return topNum;
 		}
+	}
+	
+	// isEmpty method
+	public boolean isEmpty() {
+		return (top < 0);
+	}
+		
+	// isFull method
+	public boolean isFull() {
+		return (top >= MAX_NUMBER_OF_OBJECTS);
 	}
 	
 	// showStack method
