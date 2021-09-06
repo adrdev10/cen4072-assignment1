@@ -43,4 +43,15 @@ public class StackDD {
 		}
 	}
 	
+	// peek method
+	public Integer peek() {
+		if (top < 0) {
+			// stack underflow
+			return 0;
+		} else {
+			Integer topNum = stack[top];
+			return topNum;
+		}
+	}
+	
 }
