@@ -38,7 +38,7 @@ public class StackDD {
 			return 0;
 		} else {
 			// popping number from stack
-			Integer numPopped = stack[top];
+			Integer numPopped = stack[top--];
 			return numPopped;
 		}
 	}
