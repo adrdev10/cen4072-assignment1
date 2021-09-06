@@ -59,6 +59,20 @@ public class StackDD {
 		return (top >= MAX_NUMBER_OF_OBJECTS);
 	}
 	
+	// emptyStack method
+	public boolean emptyStack() {
+		if (this.isEmpty()) {
+			// stack is already empty
+			return false;
+		} else {
+			for (int i = 0; i <= top; i++) {
+				stack[i] = 0;
+			}
+			this.top = -1;  // resetting top value
+			return true;
+		}
+	}
+	
 	// showStack method
 	public void showStack() {
 		for (int i = top; i > -1; i --) {
