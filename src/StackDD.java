@@ -54,4 +54,11 @@ public class StackDD {
 		}
 	}
 	
+	// showStack method
+	public void showStack() {
+		for (int i = top; i > -1; i --) {
+			System.out.println(stack[i] + " ");
+		}
+	}
+	
 }
