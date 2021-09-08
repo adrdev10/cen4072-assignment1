@@ -3,14 +3,14 @@ import java.util.*;
 import java.lang.*;
 
 
-public class MyStack 
+public class stackDC
 {
 	private final int limitSize = 5;
 	private int currentLenght = -1;
 	private int top = -1;
 	private int[] stack;
 	
-	public MyStack() 
+	public stackDC() 
         {
 		// TODO Auto-generated constructor stub
 		stack = new int[limitSize];
