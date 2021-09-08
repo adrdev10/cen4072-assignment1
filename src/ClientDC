@@ -1,0 +1,70 @@
+public static void main(String[] args) 
+{
+      MyStack theStack = new MyStack(); 
+      Scanner scanner = new Scanner(System.in);
+      
+      System.out.println("Welcome to the stack class dessign by contract");
+      System.out.println("With the stack, you can push a number, pop the top item, ");
+      System.out.println(", peek in the top item, or you can also print the stack at any point");
+      System.out.println(" in the program");
+
+      System.out.println("\n");
+
+      bool keepRunning = TRUE;
+
+      while(keepRunning)
+      {
+      System.out.println("Now you can enter: 1 for push() followed by the number being pushed ");
+      System.out.println("                 : 2 for pop() ");
+      System.out.println("                 : 3 for peek() ");
+      System.out.println("                 : 4 to print the stack() ");
+      System.out.println("                 : 5 to exit the program");
+
+      int c = scanner.nextLine();
+        if(c == 1)
+        {
+          System.out.println("Enter the number:");
+          int num = scanner.nextLine();
+          if(//theStack is full)
+          {
+              System.out.println("We are sorry your number couldn't be added");
+              System.out.println("because the stack was full.");
+          }
+          else theStack.push(num);
+        }
+        if(c == 2)
+        {
+          if(//theStack is empty)
+          {
+             System.out.println("We are sorry, the pop() couldn't be executed");
+             System.out.println("because the stack was empty");
+          }
+          else theStack.pop();       
+        }
+        if(c == 3)
+        {
+           if(//theStack is empty)
+          {
+             System.out.println("We are sorry, the peek() couldn't be executed");
+             System.out.println("because the stack was empty");
+          }
+          else theStack.peek();    
+        }
+         if(c == 4)
+         {
+            if(//theStack is empty)
+          {
+             System.out.println("The stack is empty");
+          }
+          else theStack.print();
+         }
+         if(c == 5)
+         {
+            keepRunning = False;
+            System.out.println("Program finishing... Thank you!");
+         }
+         else System.out.println("Invalid answer!");
+      }
+
+      
+}
