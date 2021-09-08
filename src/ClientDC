@@ -30,8 +30,9 @@ public class ClientDC {
       System.out.println("Now you can enter: 1 for push() followed by the number being pushed ");
       System.out.println("                 : 2 for pop() ");
       System.out.println("                 : 3 for peek() ");
-      System.out.println("                 : 4 to print the stack() ");
-      System.out.println("                 : 5 to exit the program");
+      System.out.println("                 : 4 to emptyStack() ");
+      System.out.println("                 : 5 to print the stack() ");
+      System.out.println("                 : 6 to exit the program");
       
       //Get input from user
       int c = scanner.nextInt();
