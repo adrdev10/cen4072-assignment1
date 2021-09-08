@@ -1,61 +1,69 @@
 import java.util.ArrayList;
+import java.util.*;
+import java.lang.*;
 
-public class stackDC {
+
+public class MyStack 
+{
 	private final int limitSize = 5;
 	private int currentLenght = -1;
 	private int top = -1;
 	private int[] stack;
 	
-	public stackDC() {
+	public MyStack() 
+        {
 		// TODO Auto-generated constructor stub
 		stack = new int[limitSize];
 	}
 	
-	public boolean isFull() {
-		return currentLenght == stack.length;
+	public boolean isFull() 
+        {
+                if(top == 4 )
+                {
+                    return true;
+                }
+                else 
+                    return false;
 	}
 	
 	public void push(int value) {
-		if (isFull()) {
-			return;
-		}
-		if (value < 0) {
-			return; 
-		}
 		top += 1;
+                System.out.println("Inserting number " + value);
 		stack[top] = value;
 	}
 	
-	public int pop() {
-		if (isEmpty()) {
-			return -1;
-		}
+	public void pop() {
 		top--;
-		return stack[top+1];
 	}
 	
-	public void peek() {
-		if (isEmpty()) {
-			System.out.print("Stack is empty");
-			return;
-		}
-		System.out.print(stack[top]);
+	public void peek() 
+        {
+                System.out.println("This the top item");
+		System.out.println(stack[top]);
 	}
 	
-	public void emptyStack() {
-		if (isEmpty()) {
-			return;
-		}
-		for (int i = 0; i <= top; i++) {
+	public void emptyStack() 
+        {
+		for (int i = 0; i <= top; i++) 
+                {
 			stack[i] = 0;
 		}
-	}
+                
+         }
 
-
-	private boolean isEmpty() {
+        public void printStack()
+        {
+            System.out.println("Here is your stack");
+            for (int i = top; i > -1; i --) {
+			System.out.println(stack[i] + " ");
+		}
+        }
+        
+	public boolean isEmpty() {
 		// TODO Auto-generated method stub
-		return top == -1;
+                if(top == -1)
+                    return true;
+                else return false;
 	}
 	
-	
-}
+}	
