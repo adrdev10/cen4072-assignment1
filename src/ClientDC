@@ -109,18 +109,7 @@ public class ClientDC {
           }
           else theStack.printStack();
          }
-         if(c == 5)
-         {
-           //!!!Checking pre-condition!!!
-           // - The stack must not be empty
-           //(if the stack is empty show error)
-            if(theStack.isEmpty())
-          {
-             System.out.println("The stack is already empty");
-          }
-          else theStack.emptyStack();
-          
-         }
+        
          if(c == 6)
          {
             //set loop to false
