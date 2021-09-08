@@ -1,5 +1,16 @@
-public static void main(String[] args) 
-{
+import java.util.*;
+import java.lang.*;
+/**
+ *
+ * @author oscar
+ */
+
+//Design by contract client class
+public class ClientDC {
+    
+     public static void main(String[] args) 
+    {
+    //Creating MyStack object and scanner object
       MyStack theStack = new MyStack(); 
       Scanner scanner = new Scanner(System.in);
       
@@ -9,62 +20,89 @@ public static void main(String[] args)
       System.out.println(" in the program");
 
       System.out.println("\n");
-
-      bool keepRunning = TRUE;
+      
+      //Bool value to keep looping until client enters a 5 to exit
+      boolean keepRunning = true;
 
       while(keepRunning)
       {
+      System.out.print("\n");
       System.out.println("Now you can enter: 1 for push() followed by the number being pushed ");
       System.out.println("                 : 2 for pop() ");
       System.out.println("                 : 3 for peek() ");
       System.out.println("                 : 4 to print the stack() ");
       System.out.println("                 : 5 to exit the program");
-
-      int c = scanner.nextLine();
+      
+      //Get input from user
+      int c = scanner.nextInt();
+      
+        //if statement will execute if user enters 1
         if(c == 1)
         {
+          //ask for user input
           System.out.println("Enter the number:");
-          int num = scanner.nextLine();
-          if(//theStack is full)
+          int num = scanner.nextInt();
+          
+          //!!!Checking pre-condition!!! 
+          // - The stack must not be full
+          //(if the stack is full show error)
+          if(theStack.isFull())
           {
               System.out.println("We are sorry your number couldn't be added");
               System.out.println("because the stack was full.");
           }
           else theStack.push(num);
+          
         }
+        //if statement will execute if user enters 2
         if(c == 2)
-        {
-          if(//theStack is empty)
+        { 
+          //!!!Checking pre-condition!!!
+          // - The stack must not be empty
+          //(if the stack is empty show error)
+          if(theStack.isEmpty())
           {
              System.out.println("We are sorry, the pop() couldn't be executed");
              System.out.println("because the stack was empty");
           }
-          else theStack.pop();       
+          else
+              theStack.pop();
+                    
         }
+        //if statement will execute if user enters 3
         if(c == 3)
         {
-           if(//theStack is empty)
+           //!!!Checking pre-condition!!!
+           // - The stack must not be empty
+           //(if the stack is empty show error)
+           if(theStack.isEmpty())
           {
              System.out.println("We are sorry, the peek() couldn't be executed");
              System.out.println("because the stack was empty");
           }
           else theStack.peek();    
         }
+        //if statement will execute if user enters 4
          if(c == 4)
          {
-            if(//theStack is empty)
+           //!!!Checking pre-condition!!!
+           // - The stack must not be empty
+           //(if the stack is empty show error)
+            if(theStack.isEmpty())
           {
              System.out.println("The stack is empty");
           }
-          else theStack.print();
+          else theStack.printStack();
          }
+         
          if(c == 5)
          {
-            keepRunning = False;
+            //set loop to false
+            keepRunning = false;
             System.out.println("Program finishing... Thank you!");
          }
-         else System.out.println("Invalid answer!");
+         else if(c > 5) 
+             System.out.println("Invalid answer!");
       }
-
-      
+}
 }
