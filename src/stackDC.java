@@ -7,7 +7,6 @@ public class stackDC
 { 
 	//Private attributes
 	private final int limitSize = 5;
-	private int currentLenght = -1;
 	private int top = -1;
 	private int[] stack;
 	
@@ -18,7 +17,7 @@ public class stackDC
 		stack = new int[limitSize];
 	}
 	
-	//isFull() return true if funtion is full and false otherwise.
+	//isFull() return true if function is full and false otherwise.
 	public boolean isFull() 
         {
                 if(top == 4 )
@@ -71,7 +70,7 @@ public class stackDC
 		}
         }
         
-	//isEmpty() return true if estack is empty and false otherwise.
+	//isEmpty() return true if stack is empty and false otherwise.
 	public boolean isEmpty() {
 		// TODO Auto-generated method stub
                 if(top == -1)
