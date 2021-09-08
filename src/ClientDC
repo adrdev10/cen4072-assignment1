@@ -11,7 +11,7 @@ public class ClientDC {
      public static void main(String[] args) 
     {
     //Creating MyStack object and scanner object
-      MyStack theStack = new MyStack(); 
+      stackDC theStack = new stackDC(); 
       Scanner scanner = new Scanner(System.in);
       
       System.out.println("Welcome to the stack class dessign by contract");
