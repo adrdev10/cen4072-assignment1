@@ -4,7 +4,8 @@ import java.lang.*;
 
 //Stack class implemented as Design by Contract
 public class stackDC
-{
+{ 
+	//Private attributes
 	private final int limitSize = 5;
 	private int currentLenght = -1;
 	private int top = -1;
