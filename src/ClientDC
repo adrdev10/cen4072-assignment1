@@ -83,6 +83,7 @@ public class ClientDC {
           }
           else theStack.peek();    
         }
+        
         //if statement will execute if user enters 4
          if(c == 4)
          {
@@ -91,7 +92,20 @@ public class ClientDC {
            //(if the stack is empty show error)
             if(theStack.isEmpty())
           {
-             System.out.println("The stack is empty");
+             System.out.println("The stack is already empty");
+          }
+          else theStack.emptyStack();
+         }
+         
+         //if statement will execute if user enters 5
+         if(c == 5)
+         {
+           //!!!Checking pre-condition!!!
+           // - The stack must not be empty
+           //(if the stack is empty show error)
+            if(theStack.isEmpty())
+          {
+             System.out.println("The stack is already empty");
           }
           else theStack.printStack();
          }
