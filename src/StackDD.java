@@ -56,7 +56,7 @@ public class StackDD {
 		
 	// isFull method
 	public boolean isFull() {
-		return (top >= MAX_NUMBER_OF_OBJECTS);
+		return (top >= MAX_NUMBER_OF_OBJECTS - 1);
 	}
 	
 	// emptyStack method
@@ -74,10 +74,16 @@ public class StackDD {
 	}
 	
 	// showStack method
-	public void showStack() {
+	public String showStack() {
+		String stackString = "";
 		for (int i = top; i > -1; i --) {
-			System.out.println(stack[i] + " ");
+			stackString += stack[i];
+			if (i != 0) {
+				stackString += " ";
+			}
 		}
+		return stackString;
 	}
+	
 	
 }

@@ -1,0 +1,123 @@
+import java.util.*;
+import java.lang.*;
+/**
+ *
+ * @author oscar
+ */
+
+//Design by contract client class
+public class ClientDC {
+    
+     public static void main(String[] args) 
+    {
+    //Creating MyStack object and scanner object
+      stackDC theStack = new stackDC(); 
+      Scanner scanner = new Scanner(System.in);
+      
+      System.out.println("Welcome to the stack class dessign by contract");
+      System.out.println("With the stack, you can push a number, pop the top item, ");
+      System.out.println(", peek in the top item, or you can also print the stack at any point");
+      System.out.println(" in the program");
+
+      System.out.println("\n");
+      
+      //Bool value to keep looping until client enters a 5 to exit
+      boolean keepRunning = true;
+
+      while(keepRunning)
+      {
+      System.out.print("\n");
+      System.out.println("Now you can enter: 1 for push() followed by the number being pushed ");
+      System.out.println("                 : 2 for pop() ");
+      System.out.println("                 : 3 for peek() ");
+      System.out.println("                 : 4 to emptyStack() ");
+      System.out.println("                 : 5 to print the stack() ");
+      System.out.println("                 : 6 to exit the program");
+      
+      //Get input from user
+      int c = scanner.nextInt();
+      
+        //if statement will execute if user enters 1
+        if(c == 1)
+        {
+          //ask for user input
+          System.out.println("Enter the number:");
+          int num = scanner.nextInt();
+          
+          //!!!Checking pre-condition!!! 
+          // - The stack must not be full
+          //(if the stack is full show error)
+          if(theStack.isFull())
+          {
+              System.out.println("We are sorry your number couldn't be added");
+              System.out.println("because the stack was full.");
+          }
+          else theStack.push(num);
+          
+        }
+        //if statement will execute if user enters 2
+        if(c == 2)
+        { 
+          //!!!Checking pre-condition!!!
+          // - The stack must not be empty
+          //(if the stack is empty show error)
+          if(theStack.isEmpty())
+          {
+             System.out.println("We are sorry, the pop() couldn't be executed");
+             System.out.println("because the stack was empty");
+          }
+          else
+              theStack.pop();
+                    
+        }
+        //if statement will execute if user enters 3
+        if(c == 3)
+        {
+           //!!!Checking pre-condition!!!
+           // - The stack must not be empty
+           //(if the stack is empty show error)
+           if(theStack.isEmpty())
+          {
+             System.out.println("We are sorry, the peek() couldn't be executed");
+             System.out.println("because the stack was empty");
+          }
+          else theStack.peek();    
+        }
+        
+        //if statement will execute if user enters 4
+         if(c == 4)
+         {
+           //!!!Checking pre-condition!!!
+           // - The stack must not be empty
+           //(if the stack is empty show error)
+            if(theStack.isEmpty())
+          {
+             System.out.println("The stack is already empty");
+          }
+          else theStack.emptyStack();
+         }
+         
+         //if statement will execute if user enters 5
+         if(c == 5)
+         {
+           //!!!Checking pre-condition!!!
+           // - The stack must not be empty
+           //(if the stack is empty show error)
+            if(theStack.isEmpty())
+          {
+             System.out.println("The stack is already empty");
+          }
+          else theStack.printStack();
+         }
+        
+         if(c == 6)
+         {
+            //set loop to false
+            keepRunning = false;
+            System.out.println("Program finishing... Thank you!");
+         }
+         else if(c > 6) 
+             System.out.println("Invalid answer!");
+      }
+}
+}
