@@ -1,6 +1,4 @@
 
-import java.util.ArrayList;
-
 public class StackDD {
 	
 	private final int MAX_NUMBER_OF_OBJECTS = 5;

@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.*;
-import java.lang.*;
 
 //Stack class implemented as Design by Contract
 public class stackDC
