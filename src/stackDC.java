@@ -59,7 +59,7 @@ public class stackDC
          }
 	//Post-condition: Empty the stack
 
-        public void printStack()
+        public String printStack()
         {
             System.out.println("Here is your stack");
 	    String stackString = "";
