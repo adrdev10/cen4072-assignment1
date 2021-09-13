@@ -51,8 +51,7 @@ public class stackDC
 	//Pre-condition: Stack is not empty
 	public void emptyStack() 
         {
-		for (int i = -1; i <= top; i++) 
-                {
+		while(top != -1) {
 			pop();
 		}
                 

@@ -48,7 +48,6 @@ public class StackDCTest {
 		testStack.push(3);
 		testStack.emptyStack();
 		assertTrue(testStack.isEmpty() == true);
-		//ends in failure currently
 	}
 		
 	//Testing push method
