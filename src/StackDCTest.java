@@ -23,33 +23,54 @@ public class StackDCTest {
 	
 	@Test
 	void isFullTest1() {
-		
+		stackDC testStack = new stackDC();
+		assertTrue(testStack.isFull() != true);
 	}
 	
 	@Test
 	void isFullTest2() {
-		
+		stackDC testStack = new stackDC();
+		testStack.push(1);
+		testStack.push(2);
+		testStack.push(3);
+		testStack.push(4);
+		testStack.push(5);
+		assertTrue(testStack.isFull() == true);
 	}
 	
 	//Testing emptyStack method
 	
 	@Test
 	void emptyStackTest1() {
-		
+		stackDC testStack = new stackDC();
+		testStack.push(1);
+		testStack.push(2);
+		testStack.push(3);
+		testStack.emptyStack();
+		assertTrue(testStack.isEmpty() == true);
+		//ends in failure currently
 	}
 		
 	//Testing push method
 	
 	@Test
 	void pushTest1() {
-		
+		stackDC testStack = new stackDC();
+		int numToPush = 1;
+		testStack.push(numToPush);
+		assertEquals(testStack.peek(), numToPush);
 	}
 	
 	//Testing pop method
 	
 	@Test
 	void popTest1() {
-		
+		stackDC testStack = new stackDC();
+		int peekNumAfterPop = 1;
+		testStack.push(peekNumAfterPop);
+		testStack.push(2);
+		testStack.pop();
+		assertEquals(testStack.peek(), peekNumAfterPop);
 	}
 	
 	@Test
@@ -61,7 +82,10 @@ public class StackDCTest {
 	
 	@Test
 	void peekTest1() {
-		
+		stackDC testStack = new stackDC();
+		int num = 1;
+		testStack.push(num);
+		assertEquals(testStack.peek(), num);
 	}
 	
 	//Testing printStack method
