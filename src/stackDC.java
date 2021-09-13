@@ -34,8 +34,8 @@ public class stackDC
 	//Post-condition: The stack size is incremented by 1
 	
 	//Pre-condition: The stack cannot be empty
-	public void pop() {
-		top--;
+	public int pop() {
+		return stack[top--];
 	}
 	//Post-condition: The stack size is decremented by 1
 	

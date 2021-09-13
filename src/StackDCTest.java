@@ -74,7 +74,11 @@ public class StackDCTest {
 	
 	@Test
 	void popTest2() {
-		
+		stackDC testStack = new stackDC();
+		int numToBePopped = 1;
+		testStack.push(numToBePopped);
+		int numPopped = testStack.pop();
+		assertEquals(numPopped, numToBePopped);
 	}
 	
 	//Testing peek method
