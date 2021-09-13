@@ -91,7 +91,12 @@ public class StackDCTest {
 	
 	@Test
 	void printStackTest1() {
-		
+		stackDC testStack = new stackDC();
+		testStack.push(1);
+		testStack.push(2);
+		testStack.push(3);
+		String stack = "3 2 1";
+		assertEquals(stack, testStack.printStack());
 	}
 	
 }
