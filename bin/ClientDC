@@ -107,7 +107,7 @@ public class ClientDC {
           {
              System.out.println("The stack is already empty");
           }
-          else theStack.printStack();
+          else System.out.println(theStack.printStack());
          }
         
          if(c == 6)
