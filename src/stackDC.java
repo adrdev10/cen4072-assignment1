@@ -40,19 +40,20 @@ public class stackDC
 	//Post-condition: The stack size is decremented by 1
 	
 	//Pre-condition: The stack cannot be empty
-	public void peek() 
+	public int peek() 
         {
                 System.out.println("This the top item");
 		System.out.println(stack[top]);
+		return stack[top];
 	}
 	//Post-condition: Display the top item
 	
 	//Pre-condition: Stack is not empty
 	public void emptyStack() 
         {
-		for (int i = 0; i <= top; i++) 
+		for (int i = -1; i <= top; i++) 
                 {
-			stack[i] = 0;
+			pop();
 		}
                 
          }
@@ -61,10 +62,16 @@ public class stackDC
         public void printStack()
         {
             System.out.println("Here is your stack");
+	    String stackString = "";
             for (int i = top; i > -1; i --) 
 	        {
-			System.out.println(stack[i] + " ");
+		    stackString += stack[i];
+		    if( i != 0)
+		    {
+			    stackString += " ";
+		    }
 		}
+		return stackString;
         }
         
 	//isEmpty() return true if stack is empty and false otherwise.
