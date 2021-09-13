@@ -8,11 +8,15 @@ public class StackDCTest {
 	
 	@Test
 	void isEmptyTest1() {
-		
+		stackDC testStack = new stackDC();
+		assertTrue(testStack.isEmpty() == true);
 	}
 	
+	@Test
 	void isEmptyTest2() {
-		
+		stackDC testStack = new stackDC();
+		testStack.push(1);
+		assertTrue(testStack.isEmpty() != true);
 	}
 	
 	//Testing isFull method
@@ -22,6 +26,7 @@ public class StackDCTest {
 		
 	}
 	
+	@Test
 	void isFullTest2() {
 		
 	}
@@ -47,6 +52,7 @@ public class StackDCTest {
 		
 	}
 	
+	@Test
 	void popTest2() {
 		
 	}
