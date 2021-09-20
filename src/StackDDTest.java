@@ -60,7 +60,7 @@ class StackDDTest {
 		StackDD stackDD = new StackDD();
 		int numToPush = 4;
 		stackDD.push(numToPush);
-		assertEquals(stackDD.peek(), numToPush);
+		assertSame(stackDD.peek(), numToPush);
 	}
 	
 	
@@ -73,7 +73,7 @@ class StackDDTest {
 		stackDD.push(peekNumAfterPop);
 		stackDD.push(5);
 		stackDD.pop();
-		assertEquals(stackDD.peek(), peekNumAfterPop);
+		assertSame(stackDD.peek(), peekNumAfterPop);
 	}
 	
 	@Test
@@ -94,7 +94,7 @@ class StackDDTest {
 		StackDD stackDD = new StackDD();
 		int num = 5;
 		stackDD.push(num);
-		assertEquals(stackDD.peek(), num);
+		assertSame(stackDD.peek(), num);
 		
 	}
 	
